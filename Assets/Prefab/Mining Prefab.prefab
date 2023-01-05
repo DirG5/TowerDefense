@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5769453403589047024}
   - component: {fileID: 2231496409215140484}
+  - component: {fileID: 6510879802035886154}
+  - component: {fileID: 3540741547156566806}
+  - component: {fileID: 734496542342716321}
+  - component: {fileID: 6374929436745725868}
   m_Layer: 0
   m_Name: Mining Prefab
   m_TagString: Untagged
@@ -47,6 +51,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingSize: {x: 2, y: 2}
   renderer: {fileID: 9094529907358751250}
+--- !u!114 &6510879802035886154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654700534392816505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4f1307aa506dd439d5b50aa7e13e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstState: {fileID: 3540741547156566806}
+--- !u!114 &3540741547156566806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654700534392816505}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f293ff7228e894c8c658caad8baca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitions:
+  - {fileID: 734496542342716321}
+--- !u!114 &734496542342716321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654700534392816505}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5435803dd12b55143b2fe58f140b58cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextState: {fileID: 3540741547156566806}
+--- !u!114 &6374929436745725868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654700534392816505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8920762395c45904689cb9feb97d58a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitions:
+  - {fileID: 734496542342716321}
 --- !u!1 &6820767955131548982
 GameObject:
   m_ObjectHideFlags: 0

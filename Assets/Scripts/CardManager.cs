@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
@@ -88,6 +83,9 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoin
 
             _gridController.Grid[(int)_draggingBuilding.transform.position.x, (int)_draggingBuilding.transform.position.z] = _building;
             _building.ResetColor();
+
+            WorkingTransition workingTransition = _draggingBuilding.GetComponent<WorkingTransition>();
+            workingTransition.IsBuildingPlaced = true;
         }
     }
 
